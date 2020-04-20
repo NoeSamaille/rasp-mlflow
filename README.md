@@ -6,7 +6,9 @@ Docker image for MLFlow, running on Raspberry Pi.
 
 To start mlflow server, run:
 ```
-docker run -it -p 5000:5000 -v <YOUR_PERSISTENT_DIR>:/app/mlflow --name mlflow-server noes/rasp-mlflow mlflow server --backend-store-uri /app/mlflow/mlflow-data --host 0.0.0.0
+docker run -it -p 5000:5000 -v <YOUR_PERSISTENT_DIR>:/app/mlflow \
+  --name mlflow-server noes/rasp-mlflow \
+  mlflow server --backend-store-uri /app/mlflow/mlflow-data --host 0.0.0.0
 ```
 
 To stop mlflow server, run:
